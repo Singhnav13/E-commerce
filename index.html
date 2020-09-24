@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    #myModal .modal-head,
+    #myModal h4,
+    #myModal .close {
+      background-color: #ff523b;
+      color: white !important;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    #myModal .modal-footer {
+      background-color: #f9f9f9;
+    }
+  </style>
+  <title>E-commerce Website Using hTML, CSS and Javascript</title>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#" style="color: #ff523b; font-size: 1.2rem; font-weight: 600;">Singh Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="myBtn">Account</a>
+          </li>
+        </ul>
+        <button id="custom" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>
+
+      </div>
+
+    </nav>
+    </div>
+
+    <!-- Hero section -->
+
+    <div class="hero" style="  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/hero1.jpg);">
+     <div class="hero-text">
+      <h3>LOVE FASHION?</h3>
+    <p>You are at right place</p>
+    <button id="hero-btn">Explore</button>
+  </div>
+  </div>
+
+
+
+
+  <!-- -------------Featured custom-categories---------------- -->
+
+  <div class="custom-categories" id="products">
+    <h2 class="custom-title">Deals of the day</h2>
+    <div class="small-custom-container">
+      <div class="custom-row">
+        <div class="custom-col-3">
+          <a class="test-popup-link" href="images/category-1.jpg"><img src="images/category-1.jpg" alt="category"></a>
+          <h4>Stylish Shoes (Orange)</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Shoes-Orange" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+          </div>
+        </div>
+
+        <div class="custom-col-3">
+          <a class="test-popup-link" href="images/category-2.jpg"><img src="images/category-2.jpg" alt="category"></a>
+          <h4>Stylish Shoes (White)</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Shoes-White" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+
+          </div>
+        </div>
+
+        <div class="custom-col-3">
+          <a class="test-popup-link" href="images/category-3.jpg"><img src="images/category-3.jpg" alt="category"></a>
+          <h4>Hoodie</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Hoodie" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- -------------Featured Products---------------- -->
+
+
+  <div class="small-custom-container">
+    <h2 class="custom-title">Featured Products</h2>
+    <div class="custom-row">
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-1.jpg"><img src="images/product-1.jpg" alt="product"></a>
+        <h4>Red T-Shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="T-Shirt(Red)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+        </div>
+      </div>
+
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-2.jpg"><img src="images/product-2.jpg" alt="product"></a>
+        <h4>Black Shoes</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="Shoes(Black)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+
+        </div>
+      </div>
+
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-3.jpg"><img src="images/product-3.jpg" alt="product"></a>
+        <h4>Black Jeans</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="Jeans(Black)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+
+        </div>
+      </div>
+
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-4.jpg"><img src="images/product-4.jpg" alt="product"></a>
+        <h4>Blue T-Shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="T-Shirt(Blue)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <h2 class="custom-title">Latest Products</h2>
+    <div class="custom-row">
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-5.jpg"><img src="images/product-5.jpg" alt="product"></a>
+        <h4>Gray Shoes</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="Shoes(gray)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+        </div>
+      </div>
+
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-6.jpg"><img src="images/product-6.jpg" alt="product"></a>
+        <h4>Puma T-Shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="T-Shirt(Puma)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+        </div>
+      </div>
+
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-7.jpg"><img src="images/product-7.jpg" alt="product"></a>
+        <h4>3-Pack Socks</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="Socks(3-Pack)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+        </div>
+      </div>
+
+      <div class="custom-col-4">
+        <a class="test-popup-link" href="images/product-8.jpg"><img src="images/product-8.jpg" alt="product"></a>
+        <h4>Sports Watch</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p>$50.00</p>
+        <div class="cart">
+          <p><button data-name="Watch(Sports)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+              class="add-to-cart">Add to cart</button></p>
+        </div>
+      </div>
+
+      <div class="custom-row">
+        <div class="custom-col-4">
+          <a class="test-popup-link" href="images/product-9.jpg"><img src="images/product-9.jpg" alt="product"></a>
+          <h4>Classic Watcht</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Watch(Classic)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+          </div>
+        </div>
+
+        <div class="custom-col-4">
+          <a class="test-popup-link" href="images/product-10.jpg"><img src="images/product-10.jpg" alt="product"></a>
+          <h4>Black Shoes</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Shoes(Black)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+          </div>
+        </div>
+
+        <div class="custom-col-4">
+          <a class="test-popup-link" href="images/product-11.jpg"><img src="images/product-11.jpg" alt="product"></a>
+          <h4>Grayish Shoes</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Shoes(grayish)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+          </div>
+        </div>
+
+        <div class="custom-col-4">
+          <a class="test-popup-link" href="images/product-12.jpg"><img src="images/product-12.jpg" alt="product"></a>
+          <h4>RBlack Track-Pant</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <p>$50.00</p>
+          <div class="cart">
+            <p><button data-name="Track-Pant(Black)" data-price="50" onclick="this.innerHTML = 'Added'; hey1()"
+                class="add-to-cart">Add to cart</button></p>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- --------------testimonials-------------- -->
+
+  <div class="testimonial">
+    <div class="small-custom-container">
+      <h2 class="custom-title">Reviews</h2>
+      <div class="custom-row">
+        <div class="custom-col-3">
+          <i class="fa fa-quote-left"></i>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur officia veritatis nihil, nisi
+            reprehenderit, nostrum obcaecati quos architecto, porro totam ut eaque culpa animi ipsa molestiae
+            temporibus adipisci consequuntur qui?</p>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+            <img src="images/user-1.png" alt="user1">
+          <h3>Alina James</h3>
+        </div>
+
+        <div class="custom-col-3">
+          <i class="fa fa-quote-left"></i>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur officia veritatis nihil, nisi
+            reprehenderit, nostrum obcaecati quos architecto, porro totam ut eaque culpa animi ipsa molestiae
+            temporibus adipisci consequuntur qui?</p>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <img src="images/user-2.png" alt="user1">
+          <h3>Roger Greemes</h3>
+        </div>
+
+        <div class="custom-col-3">
+          <i class="fa fa-quote-left"></i>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur officia veritatis nihil, nisi
+            reprehenderit, nostrum obcaecati quos architecto, porro totam ut eaque culpa animi ipsa molestiae
+            temporibus adipisci consequuntur qui?</p>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <img src="images/user-3.png" alt="user1">
+          <h3>Mary Yon</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- -------------custom-brands--------------- -->
+
+  <div class="custom-brands">
+    <div class="small-custom-container">
+      <h2 class="custom-title">Partners</h2>
+      <div class="custom-row">
+        <div class="custom-col-5">
+          <img src="images/logo-godrej.png" alt="godrej">
+        </div>
+        <div class="custom-col-5">
+          <img src="images/logo-oppo.png" alt="godrej">
+        </div>
+        <div class="custom-col-5">
+          <img src="images/logo-coca-cola.png" alt="godrej">
+        </div>
+        <div class="custom-col-5">
+          <img src="images/logo-paypal.png" alt="godrej">
+        </div>
+        <div class="custom-col-5">
+          <img src="images/logo-philips.png" alt="godrej">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ------------Footer----------- -->
+
+  <div class="footer">
+    <div class="custom-container">
+      <div class="custom-row">
+        <div class="footer-col-1">
+          <h3>Download Our App</h3>
+          <p>Download App for Android and IOS mobile phone</p>
+          <div class="app-logo">
+            <a href="https://play.google.com/"><img src="images/play-store.png" alt=""></a>
+            <a href="https://www.apple.com/ios/app-store/"><img src="images/app-store.png" alt=""></a>
+          </div>
+        </div>
+        <div class="footer-custom-col-2">
+          <h1 style="color: #ff523b; font-size: 1.5rem; font-weight: 600;">Singh Store</h1>
+          <p>Our purpose is to make fashion accessible to everyone from the comfort of their home</p>
+        </div>
+        <div class="footer-custom-col-4">
+          <h3>Follow Us</h3>
+          <ul>
+            <a href="https://www.google.com/"><li>Google</li></a>
+            <a href="https://www.facebook.com/"><li>Facebook</li></a>
+            <a href="https://www.twitter.com/"><li>Twitter</li></a>
+            <a href="https://www.instagram.com/"><li>Instagram</li></a>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+
+          </table>
+          <div>Total price: $<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="checkout.html"><button type="button" class="btn btn-primary">Order now</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Log in modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-head" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block"
+              style="background: #ff523b; border: 1px solid #ff523b"><span class="glyphicon glyphicon-off"></span>
+              Login</button>
+          </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-around">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+              class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p><a href="#">Forgot Password?</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+  
+  <script>
+    $(document).ready(function () {
+      $("#myBtn").click(function () {
+        $("#myModal").modal();
+      });
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
